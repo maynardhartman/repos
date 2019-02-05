@@ -1,0 +1,9 @@
+{
+  "name": "multithreaded",
+  "version": "0.0.0",
+  "description": "multithreaded",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

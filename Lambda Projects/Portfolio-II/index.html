@@ -1,0 +1,292 @@
+﻿<!DOCTYPE HTML>
+<!--
+Hyperspace by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Hyperspace by HTML5 UP</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+    <script src='https://www.google.com/recaptcha/api.js?render=https://www.google.com/recaptcha/api.js?render="6Lcbto4UAAAAANHCy97_GfXlbdNQkS4DM-QY-qIk"' async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--form section script-->
+
+    <script>
+        $(document).ready(function() {
+            $("#submit").click(function() {
+                var name, email, text;
+                name = $("#name").val();
+                email = $("#email").val();
+                text = $("#text").val();
+                $.post("http://10.211.235.152:3000/notes/",
+                    { name: name, email: email, text: text },
+                    function(data) {
+                        if (data === 'done') {
+                            alert("Your Information Has Been Saved.");
+                        }
+                    });
+            });
+        });
+    </script>
+</head>
+<body class="is-preload">
+
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#intro">Welcome</a>
+                </li>
+                <li>
+                    <a href="#one">Who I am</a>
+                </li>
+                <li>
+                    <a href="#two">What i do</a>
+                </li>
+                <li>
+                    <a href="generic2.html">Ponderances</a>
+                </li>
+                <li>
+                    <a href="#three">Get in touch with me</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Intro -->
+<section id="intro" class="wrapper style1 fullscreen fade-up">
+    <div class="inner">
+        <h1>
+            <img src="images/logo.png">
+        </h1>
+        <p>A Portfolio</p>
+        <ul class="actions">
+            <li>
+                <a href="#one" class="button scrolly">Learn more</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style2 spotlights">
+    <section>
+        <a href="#" class="image">
+            <img src="images/mjhartman.png" alt="Picture of Maynard Hartman" data-position="center center"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <h2>I am a student</h2>
+                <p>I am a student at Lambda School in the WebDev program.</p>
+                <ul class="actions">
+                    <li>
+                        <a href="generic.html" class="button">Learn more</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <a href="#" class="image">
+            <img src="images/sticker_board.jpg" alt="" data-position="top center"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <h2>I am a developer</h2>
+                <p>Performing all forms of web development to order.</p>
+                <ul class="actions">
+                    <li>
+                        <a href="generic.html" class="button">Learn more</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <a href="#" class="image">
+            <img src="images/buddyandmeka.jpg" alt="" data-position="25% 25%"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <h2>My Hobbies</h2>
+                <p>Include: movies (esp., scifi) Computers, yes I'm a nerd. Cooking, all kinds. My pets, buddy and meka.</p>
+                <ul class="actions">
+                    <li>
+                        <a href="generic.html" class="button">Learn more</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper style3 fade-up">
+    <div class="inner">
+        <h2>What I do</h2>
+        <p>Web Development, front to back.</p>
+        <div class="features">
+            <section>
+                <span class="icon major fa-code"></span>
+                <h3>HTML / CSS#</h3>
+                <p>Extensive training in HTML / CSS Markup Languages. LESS Compiler/Preprocessor</p>
+            </section>
+            <section>
+                <span class="icon major fa-lock"></span>
+                <h3>Javascritp / Node.js For front and back end development.</h3>
+                <p>Making sure I keep my skills up to date</p>
+            </section>
+            <section>
+                <span class="icon major fa-cog"></span>
+                <h3>C#, .Net</h3>
+                <p>Fully expierenced with this technolgy.</p>
+            </section>
+            <section>
+                <span class="icon major fa-desktop"></span>
+                <h3>Adobe Creative Studio</h3>
+                <p>Skills with Aftereffects, Photoshop, XD</p>
+            </section>
+            <section>
+                <span class="icon major fa-chain"></span>
+                <h3>Other Technologies</h3>
+                <p>Visual Studio, Postman, VS Code, Brackets, Xamarin-Forms, XAML, GitHub, Preprocessors (less) AutoDesk 3dsMax</p>
+            </section>
+            <section>
+                <span class="icon major fa-diamond"></span>
+                <h3>Shout out to my Dogs</h3>
+                <p>Who always remind me what's important: going outside, eating, and sleeping.</p>
+            </section>
+        </div>
+        <ul class="actions">
+            <li>
+                <a href="./generic.html" class="button">Learn more</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Three -->
+<section id="three" class="wrapper style1 fade-up">
+    <div class="inner">
+        <h2>Get in touch</h2>
+        <p>To reach me select a link from the right or to be added to my Email list fill in the form below and I'll get back to you.</p>
+        <div class="split style1">
+            <section>
+                <form method="post" action="/">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name"/>
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email"/>
+                        </div>
+                        <div class="field">
+                            <label for="text">Message</label>
+                            <textarea name="text" id="text" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li>
+                            <a class="button submit" id="submit" value="submit">Save</a>
+                        </li>
+                        <li>
+                    </ul>
+                </form>
+                <form action="?" method="POST">
+                    <div class="g-recaptcha" data-sitekey="6Lcbto4UAAAAANHCy97_GfXlbdNQkS4DM-QY-qIk"></div>
+                    <br/>
+                </form>
+            </section>
+            <section>
+                <ul class="contact">
+                    <li>
+                        <h3>Address</h3>
+                        <span>
+                            1146 Raywood St SE<br/>
+                            Palm Bay, FL 32909<br/>
+                            USA
+                        </span>
+                    </li>
+                    <li>
+                        <h3>Email</h3>
+                        <a href="mailto:mjhartman@brighthouse.com" class="com">mjhartman@brighthouse.com></a>
+                    </li>
+                    <li>
+                        <h3>Phone</h3>
+                        <span>
+                            <a href="tel:(321) 480-7323">(321)480-7323</a>
+                        </span>
+                    </li>
+                    <li>
+                        <h3>Social</h3>
+                        <ul class="icons">
+                            <li>
+                                <a href="https://twitter.com/MaynardHartman1" class="fa-twitter">
+                                    <span class="label">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/maynard.hartman.5" class="fa-facebook">
+                                    <span class="label">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/maynardhartman" class="fa-github">
+                                    <span class="label">GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa-instagram">
+                                    <span class="label">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/maynard-hartman-b26a4667/" class="fa-linkedin">
+                                    <span class="label">LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+        <ul class="menu">
+            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

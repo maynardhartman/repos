@@ -1,0 +1,9 @@
+{
+  "name": "zmq-filer-rep.js",
+  "version": "0.0.0",
+  "description": "zmq-filer-rep.js",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
