@@ -3748,10 +3748,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #030303, #131212);
+				background-image: -webkit-linear-gradient(to right, #020202, #1a1919);
+				background-image: -ms-linear-gradient(to right, #030303, #0e0d0d);
+				background-image: linear-gradient(to right, #030303, #0e0d0d);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3890,3 +3890,36 @@ input, select, textarea {
 			}
 
 		}
+
+		#intro .inner h1 img {
+			margin: -5px;
+		}
+	.image .Meka {
+		position: absolute;
+		left: 40px;
+		top:  50px;
+		opacity: 0.5;
+		color:   red;
+	}
+	.image .Buddy {
+		position: absolute;
+		right: 80px;
+		top:   50px;
+		opacity: 0.5;
+		color:   red;
+	}
+
+	#main .wrapper li {
+		display:  flex;
+		margin:   20px;
+		padding:  20px;
+		flex-flow: column;
+	}
+
+	#main ,wrapper ul {
+		margin:  30px;
+		padding: 20px;
+	}
+	
+	
+
