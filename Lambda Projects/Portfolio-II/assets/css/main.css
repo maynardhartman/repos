@@ -177,7 +177,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: bold;
-		line-height: 1.5;
+		line-height: 1.25;
 		margin: 0 0 0.5em 0;
 	}
 
@@ -3893,6 +3893,7 @@ input, select, textarea {
 
 		#intro .inner h1 img {
 			margin: -5px;
+			z-index: 1;
 		}
 	.image .Meka {
 		position: absolute;

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // Configuring the database
 var dbConfig = require("./config/database.config.js");
 var mongoose = require("mongoose");
-
+var _url;  // the url we play with 
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
@@ -27,9 +27,23 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
+
+
 // define a simple route
 app.get("/", (req, res) => {
-    res.json({"data": "done"});
+    // In case the client uses lower case for methods
+    req.method = req.method.toUpperCase();
+
+    if ( req.method !== 'GET' || req.method !== 'POST' || req.method !== 'PUT' || req.methos !== "DELETE")
+    {
+        res.writeHead(501, {
+            'Content-Type': 'text/plain'
+        });
+        return res.end( req.method + ' is not implemented by this server' );
+}
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.json({ data: "done"});
 });
 
 // Require routes

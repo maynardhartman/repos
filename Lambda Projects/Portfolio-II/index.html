@@ -7,7 +7,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <html>
 <head>
     <title>mjhartman.com</title>
+    <base target="_top" href="https://www.mjhartman.com/mjhartman/index.html" >
     <meta charset="utf-8"/>
+    <meta keywords="portfolio maynard hartman info skills" >
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
     <noscript>
@@ -30,7 +32,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 $.post("http://184.91.164.93:3000/notes/",
                     { name: name, email: email, text: text },
                     function(data) {
-                        if (data === 'done') {
+                        if (data === "done") {
                             alert("Your Information Has Been Saved.");
                         }
                     });
@@ -75,7 +77,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <div class="inner">
         <h1>
             <img src="images/logo.png" alt="M. J. Hartman signature">
-            <img src="images/HappyVD.png" alt="Be My Lover">
+           <!-- <img src="images/HappyVD.png" alt="Be My Lover">-->
         </h1>
         <p>A Portfolio</p>
         <ul class="actions">
@@ -122,7 +124,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </section>
     <section>
         <a href="#" class="image">
-            <img src="images/buddyandmeka.jpg" alt="" data-position="25% 25%"/>
+            <img src="images/buddyandmeka.jpg" alt="Maynard Playing with is two dogs" data-position="center center"/>
             <div class="Meka" >Meka</div>
             <div class="Buddy">Buddy</div>
         </a>
@@ -224,7 +226,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <li>
                         <h3>Address</h3>
                         <span>
-                            1146 Raywood St SE<br/>
                             Palm Bay, FL 32909<br/>
                             USA
                         </span>
