@@ -29,7 +29,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 name = $("#name").val();
                 email = $("#email").val();
                 text = $("#text").val();
-                $.post("http://184.91.164.93:3000/notes/",
+                $.post("http://184.91.164.93:3000/api/contacts/",
                     { name: name, email: email, text: text },
                     function(data) {
                         if (data === "done") {
