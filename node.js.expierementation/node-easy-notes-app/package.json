@@ -1,5 +1,5 @@
 {
-  "name": "REST Server",
+  "name": "Server",
   "version": "1.0.0",
   "description": "accept email list from web form",
   "main": "server.js",

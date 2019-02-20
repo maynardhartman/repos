@@ -1,14 +1,20 @@
 const Note = require('../models/note.model.js');
 
+exports.sendJson = function ( data, response ) {
+    response.writeHead(200, {
+        'Content-Type': 'application/json'
+        
+    });
+    response.end(JSON.stringify(data));
+}
+
 // Create and Save a new Note
 exports.create = (req, res) => {
     // Validate request
     if(!req.body.email) {
         return res.status(400).send({
-            message: "Email can not be empty",
-            
-        }); 
-        
+            message: "Email can not be empty",    
+        });    
     }
     if (!req.body.name){
         return res.status(400).send ({
@@ -17,7 +23,6 @@ exports.create = (req, res) => {
         }); 
     }
 
-    
     // Create a Note
     const note = new Note({
         name: req.body.name,
@@ -28,7 +33,8 @@ exports.create = (req, res) => {
     // Save Note in the database
     note.save()
     .then(data => {
-        res.send(data);
+        res.json("done");
+        console.log("Note Saved:" + note);
     }).catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while creating the Note."
@@ -41,7 +47,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     Note.find()
     .then(notes => {
-        res.send(notes);
+       res.json(notes);
     }).catch(err => {
         res.status(500).send({
             message:` ${err.message} || "Some error occurred while retrieving notes."`
@@ -58,7 +64,7 @@ exports.findOne = (req, res) => {
                 message: "Note not found with id " + req.params.noteId
             });   
         }
-        res.send(note);
+        res.json({note});
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
@@ -91,7 +97,7 @@ exports.update = (req, res) => {
                 message: "Message not found with id " + req.params.noteId 
             });
         }
-        res.send(note);
+        res.json({note});
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
@@ -113,7 +119,7 @@ exports.delete = (req, res) => {
                 message: "Note not found with id " + req.params.noteId
             });
         }
-        res.send({message: "Note deleted successfully!"});
+        res.json({data: "Note deleted successfully!"});
     }).catch(err => {
         if(err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({

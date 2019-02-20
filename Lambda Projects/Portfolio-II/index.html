@@ -6,16 +6,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-    <title>Hyperspace by HTML5 UP</title>
+    <title>mjhartman.com</title>
+    <base target="_top" href="https://www.mjhartman.com/mjhartman/index.html" >
     <meta charset="utf-8"/>
+    <meta keywords="portfolio maynard hartman info skills" >
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
     <script src='https://www.google.com/recaptcha/api.js?render=https://www.google.com/recaptcha/api.js?render="6Lcbto4UAAAAANHCy97_GfXlbdNQkS4DM-QY-qIk"' async defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+    
     <!--form section script-->
 
     <script>
@@ -25,18 +30,21 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 name = $("#name").val();
                 email = $("#email").val();
                 text = $("#text").val();
-                $.post("http://10.211.235.152:3000/notes/",
+                $.post("http://184.91.164.93:3000/api/contacts/",
                     { name: name, email: email, text: text },
                     function(data) {
-                        if (data === 'done') {
+                        if (data === "done") {
                             alert("Your Information Has Been Saved.");
                         }
                     });
             });
+
         });
     </script>
+   
 </head>
 <body class="is-preload">
+
 
 <!-- Sidebar -->
 <section id="sidebar">
@@ -67,15 +75,16 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <div id="wrapper">
 
 <!-- Intro -->
-<section id="intro" class="wrapper style1 fullscreen fade-up">
+<section id="intro" class="wrapper style1 fullscreen fade-down">
     <div class="inner">
         <h1>
-            <img src="images/logo.png">
+            <img src="images/logo.png" alt="M. J. Hartman signature">
+           <!-- <img src="images/HappyVD.png" alt="Be My Lover">-->
         </h1>
         <p>A Portfolio</p>
         <ul class="actions">
             <li>
-                <a href="#one" class="button scrolly">Learn more</a>
+                <a href="generic.html" class="button scrolly">See it</a>
             </li>
         </ul>
     </div>
@@ -90,10 +99,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <div class="content">
             <div class="inner">
                 <h2>I am a student</h2>
-                <p>I am a student at Lambda School in the WebDev program.</p>
+                <p>My name is Maynard J. Hartman, Jr.  I am a student at Lambda School in the WebDev program.</p>
                 <ul class="actions">
                     <li>
-                        <a href="generic.html" class="button">Learn more</a>
+                        <a href="http://lambdaschool.com" class="button">Learn more</a>
                     </li>
                 </ul>
             </div>
@@ -117,15 +126,17 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </section>
     <section>
         <a href="#" class="image">
-            <img src="images/buddyandmeka.jpg" alt="" data-position="25% 25%"/>
+            <img src="images/buddyandmeka.jpg" alt="Maynard Playing with is two dogs" data-position="center center"/>
+            <div class="Meka" >Meka</div>
+            <div class="Buddy">Buddy</div>
         </a>
         <div class="content">
             <div class="inner">
                 <h2>My Hobbies</h2>
-                <p>Include: movies (esp., scifi) Computers, yes I'm a nerd. Cooking, all kinds. My pets, buddy and meka.</p>
+                <p>Include: movies (esp., scifi) Computers, yes I'm a nerd. Cooking, all kinds. <a href="generic4.html">My pets</a>, buddy and meka and of course Flash!</p>
                 <ul class="actions">
                     <li>
-                        <a href="generic.html" class="button">Learn more</a>
+                        <a href="generic3.html" class="button">Learn more</a>
                     </li>
                 </ul>
             </div>
@@ -217,7 +228,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <li>
                         <h3>Address</h3>
                         <span>
-                            1146 Raywood St SE<br/>
                             Palm Bay, FL 32909<br/>
                             USA
                         </span>
@@ -275,6 +285,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <div class="inner">
         <ul class="menu">
             <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; All rights reserved.</li><li>Content Design: <a href="http://mjhartman.com/mjhartman/index.html">mjhartman.com</a></li>
         </ul>
     </div>
 </footer>
