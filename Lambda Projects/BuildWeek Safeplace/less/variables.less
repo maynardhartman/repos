@@ -10,4 +10,16 @@
 @mobile-normal: @mobile;
 @mobilenormal:  @mobile-normal;
 
-@mobile-width: ~"( max-width: @{mobilenormal} )";
+@tablet: 800px;
+@tablet-normal: @tablet;
+@tabletnormal:  @tablet-normal;
+
+@desktop: 1024px;
+@desktop-normal: @desktop;
+@desktopnormal:  @desktop-normal;
+
+@mobile-width:  ~"( max-width: @{mobilenormal} )";
+@desktop-width: ~"( max-width: @{desktopnormal} )";
+@tablet-width:  ~"( max-width: @{tabletnormal} )";
+
+@highlight: "#7A93C0";
