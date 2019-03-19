@@ -1,0 +1,13 @@
+// Javascript practice problems - Higher Order Functions and Callbacks
+
+
+function consume ( array, callback(array) => {
+    console.log(array);
+})
+
+function add ( array ) {
+    const size = array.length;
+    if ( size === 0 ) {
+        console.log (`You must supply an array with more than 0 or 1 - Size + ${size}`);
+    }
+}
