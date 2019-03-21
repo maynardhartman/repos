@@ -9,17 +9,21 @@ class Panel {
       this.panelContent = this.panel.querySelector('.panel-content');
 
       // Explicit binding of this
-      //this.panelButtons.addEventListener('click', this.togglePanel.bind(this));
+      this.panelButtons.addEventListener('click', () => this.togglePanel.bind(this));
 
       // this is NOT bound to the arrow and therefore looks up and finds the this keyword in the constructor
       this.panelButtons.addEventListener('click', () => this.togglePanel());
     }
     // methods
-    togglePanel() {
-      this.panelBtnOpen.classList.toggle('hide-btn');
-      this.panelBtnClose.classList.toggle('hide-btn');
-      this.panelContent.classList.toggle('toggle-on');
-    }
+    //togglePanel() {
+      //this.panelBtnOpen.classList.toggle('hide-btn');
+      //this.panelBtnClose.classList.toggle('hide-btn');
+      //this.panelContent.classList.toggle('toggle-on');
+    //}
+  }
+
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
   }
 
   // Step 1: Get the original DOM elements

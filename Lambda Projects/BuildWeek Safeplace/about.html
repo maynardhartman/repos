@@ -11,6 +11,7 @@
             <script src="js/about.js"></script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Good Times">-->
             <link rel="stylesheet" href="./css/index.css">
         </head>
@@ -23,18 +24,18 @@
                   </nav>
                 </header>
                 <section class="main-content">
-                  <h2 class="first-heading">Erica Thacker - Team Leader</h2>
+                  <h2 class="first-heading"></h2>
                   <p class="testing">
                   </p>
                 </section>
                 <section class="secondary">
-                  <div class="accordion">
+                        <div class="accordion">
                     <div class="panel">
                       <div class="panel-bar">
-                        <h3></h3>
+                        <h3 class="red-name">Erica Thacker</h3><h3>- Team Leader</h3>
                         <div class="panel-buttons">
-                            <button class="panel-btn-open">Open</button>
-                            <button class="panel-btn-close hide-btn">Close</button>
+                            <button class="panel-btn-open" id="myNav" onclick="openNav()">Details</button>
+                            <button class="panel-btn-close hide-btn" >Close</button>
                         </div>
                       </div>
                       <div class="panel-content">
@@ -46,52 +47,58 @@
                       </div>
                     </div><!-- end of panel -->
                     <div class="panel">
-                      <div class="panel-bar">
-                        <h3>Amber Meador - Backend Engineer</h3>
-                        <div class="panel-buttons">
-                          <button class="panel-btn-open">Open</button>
-                          <button class="panel-btn-close hide-btn">Close</button>
-                        </div>
-                      </div>
-                      <div class="panel-content">
-                        <a src="images/Amber Meador.jpg" alt="Picture Of Amber Meador" style="width:150px; height:150px;"></a>
-                        <p>"Southern girl living in the Mile High City, kicking React, and taking Nodes" </p><a href="amberprograms.com"></a>
-                      </div>
+                            <div class="panel-bar">
+                              <h3 class="name">Amber Meador</h3><h3>- Backend Engineer</h3>
+                              <div class="panel-buttons">
+                                  <button class="panel-btn-open">Details</button>
+                                  <button class="panel-btn-close hide-btn">Close</button>
+                              </div>
+                            </div>
+                            <div class="panel-content">
+                              <img src="images/Amber Meador.jpg" alt="Picture Of Amber Meadorr" style="width:150px; height:150px;">
+                              <p>>"Southern girl living in the Mile High City, kicking React, and taking Nodes"</p>
+                              <a href="https://amberprograms.com" class="fa-twitter">
+                                  <span class="label"></span>
+                              </a>
+                            </div>
+                          </div><!-- end of panel -->
+                    <div class="panel">
+                            <div class="panel-bar">
+                              <h3 class="name">Nolan Allen</h3><h3>- Frontend Engineer</h3>
+                              <div class="panel-buttons">
+                                <button class="panel-btn-open">Details</button>
+                                <button class="panel-btn-close hide-btn">Close</button>
+                              </div>
+                            </div>
+                            <div class="panel-content">
+                              <a img src="images/gangstasloathavatar.jpg" alt="Picture Of Nolan Allen" style="width:150px; height:150px;"></a>
+                              <p>Put Nolan Allens Bio Here</p>
+                            </div>
+                          </div><!-- end of panel -->
+
+                    <div class="panel">
+                                    <div class="panel-bar">
+                              <h3 class="name">Zach Overhulser</h3><h3>- UI 1</h3>
+                              <div class="panel-buttons">
+                                <button class="panel-btn-open" >Details</button>
+                                <button class="panel-btn-close hide-btn">Close</button>
+                              </div>
+                            </div>
+                            <div class="panel-content">
+                              <a img src="images/smallerheadshotbinary.png" alt="Picture Of Nolan Allen" style="width:150px; height:150px;"></a>
+                              <p>Put Zach's Bio Here.</p>
+                            </div>
+                          </div><!-- end of panel -->
                       <div class="panel">
                         <div class="panel-bar">
-                          <h3>Nolan Allen - Frontend Engineer</h3>
+                          <h3 class="name">Maynard Hartman</h3><h3>- UI-2</h3>
                           <div class="panel-buttons">
-                            <button class="panel-btn-open">Open</button>
+                            <button class="panel-btn-open">Details</button>
                             <button class="panel-btn-close hide-btn">Close</button>
                           </div>
                         </div>
                         <div class="panel-content">
-                          <a img src="images/gangstasloathavatar.jpg" alt="Picture Of Nolan Allen" style="width:150px; height:150px;"></a>
-                          <p>Put Nolan Allens Bio Here</p>
-                        </div>
-                      </div><!-- end of panel -->
-                      <div class="panel">
-                        <div class="panel-bar">
-                          <h3>Zach Overhulser - UI 1</h3>
-                          <div class="panel-buttons">
-                            <button class="panel-btn-open" >Open</button>
-                            <button class="panel-btn-close hide-btn">Close</button>
-                          </div>
-                        </div>
-                        <div class="panel-content">
-                          <a img src="images/smallerheadshotbinary.png" alt="Picture Of Nolan Allen" style="width:150px; height:150px;"></a>
-                          <p>Put Zach's Bio Here.</p>
-                        </div>
-                      </div><!-- end of panel -->
-                      <div class="panel">
-                        <div class="panel-bar">
-                          <h3>Maynard Hartman - UI 2</h3>
-                          <div class="panel-buttons">
-                            <a class="panel-btn-open" img src="images/smallerheadshotbinary.png" alt="Picture Of Nolan Allen" style="width:150px; height:150px;"></a>
-                            <a class="panel-btn-close hide-btn"></a>
-                          </div>
-                        </div>
-                        <div class="panel-content">
+                          <img src="images/smallerheadshotbinary.png" alt="Picture Of Nolan Allen" style="width:150px; height:150px;">
                           <p>Put Maynard's Bio here</p>
                         </div>
                       </div><!-- end of panel -->

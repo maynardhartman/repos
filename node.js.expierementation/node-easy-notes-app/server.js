@@ -1,56 +1,49 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+// File Name:  server.js
+//
 
-// create express app
-var app = express();
+// Import express
+let express = require('express');
+let bodyParser = require('body-parser');
+let mongoose = require('mongoose');
 
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+// Initialize
+let app = express();
 
-// parse requests of content-type - application/json
+app.use(bodyParser.urlencoded ({ 
+    extended: true,
+    useNewUrlParser: true 
+}));
+
 app.use(bodyParser.json());
 
+// mongoose options
+// const options = {
+//     useCreateIndex: true,
+//     useNewUrlParser: true,
+//     useFindAndModify: true,
+//   }
 
-// Configuring the database
-var dbConfig = require("./config/database.config.js");
-var mongoose = require("mongoose");
-var _url;  // the url we play with 
-mongoose.Promise = global.Promise;
-
-// Connecting to the database
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log("Could not connect to the database. Exiting now...", err);
-    process.exit();
+// Connect to mongoose 
+mongoose.connect('mongodb://127.0.0.1:27017/CRUDServer', {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useFindAndModify: true,
 });
+var db = mongoose.connection;
 
+// Import routes
+let apiRoutes = require("./api-routes")
 
+// Use Api routes in the App
+app.use('/api', apiRoutes)
 
-// define a simple route
-app.get("/", (req, res) => {
-    // In case the client uses lower case for methods
-    req.method = req.method.toUpperCase();
+// server port
+var port = process.env.PORT || 3000;
 
-    if ( req.method !== 'GET' || req.method !== 'POST' || req.method !== 'PUT' || req.methos !== "DELETE")
-    {
-        res.writeHead(501, {
-            'Content-Type': 'text/plain'
-        });
-        return res.end( req.method + ' is not implemented by this server' );
-}
-    
-    res.setHeader('Content-Type', 'application/json');
-    res.json({ data: "done"});
+// Send default message
+app.get('/', (req, res) => res.send('Hello.  Standard CRUD Server'));
+
+// Launch and listen on port
+app.listen(port, function () {
+    console.log('Running CRUD Server on port ' + port);
 });
-
-// Require routes
-require("./app/routes/note.routes.js")(app);
-
-// listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
-});
-

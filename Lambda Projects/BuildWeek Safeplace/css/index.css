@@ -166,6 +166,7 @@ table {
   text-align: center;
   margin: 10px;
   width: 0 auto;
+  padding: 10px;
   display: flex;
   align-content: center;
 }
@@ -176,9 +177,78 @@ table {
   align-content: center;
   flex-direction: column;
 }
-.navigation .pagetitle ul li a {
+.navigation {
   display: flex;
   flex-direction: row;
   text-decoration: none;
   font-size: 10px;
+  align-content: flex-end;
+}
+.navigation a {
+  align-content: flex-end;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  margin: 20px 0;
+  line-height: 1.25;
+}
+.home header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.home header nav {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+}
+.accordion .panel {
+  padding: 30px;
+}
+.accordion .panel .panel-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.accordion .panel .panel-bar .panel-buttons button {
+  cursor: pointer;
+}
+.accordion .panel .panel-bar .panel-buttons .hide-btn {
+  display: none;
+}
+.accordion .panel .panel-content {
+  display: none;
+}
+.accordion .panel .toggle-on {
+  display: block;
+}
+.name {
+  color: dodgerblue;
+}
+.panel-bar .red-name {
+  color: red;
+}
+.panel-btn-open {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: #D8D8D8;
+  overflow-x: hidden;
+  transition: 0.7s;
 }

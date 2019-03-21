@@ -35,5 +35,6 @@ namespace Algorithms
 
             return (double) volume;
         }
+        ComputeVolumeOfCylinder((double) 34, (double) 13);
     }
 }
